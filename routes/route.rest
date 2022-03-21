@@ -1,0 +1,44 @@
+
+GET http://localhost:3000/orders
+
+###
+
+PATCH http://localhost:3000/orders/623076a85945d9831542ebf8
+Content-Type: application/json
+
+{
+    "paperId": 1221,
+    "pages": 898,
+    "instructions": "Ordser 2",
+    "costPerPage": 2000    
+}
+
+###
+POST http://localhost:3000/order
+Content-Type: application/json
+
+{
+    "itemName": "Cake",
+    "price": 90,
+}
+
+###
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+
+{
+    "price": 1000
+}
+###
+
+DELETE http://localhost:3000/orders/623076a85945d9831542ebf8
+###
+
+PATCH http://localhost:3000/buyers/620911c6a0bd4ba0b77722ed
+Content-Type: application/json
+
+{
+    "itemName": "Tissues",
+    "price": 500
+}
